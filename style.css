@@ -149,34 +149,46 @@ body {
   box-shadow: 0 0 15px #0ef;
 }
 
-.about {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.about-container {
+  display: flex;
   align-items: center;
-  gap: 2rem;
-  padding: 100px 10%;
-}
-
-.about-img img {
+  /* centers text vertically */
+  gap: 40px;
+  /* spacing between image and text */
   width: 100%;
-  border-radius: 8px;
+  padding: 20px;
 }
 
-.about-text h2 {
-  color: #0ef;
+.image-box img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
-.about-text h4 {
-  font-size: 28px;
-  color: #fff;
-  margin-bottom: 15px;
+.text-box {
+  color: white;
+  max-width: 600px;
 }
 
-.about-text p {
-  color: #ccc;
+.text-box h2 {
+  color: #00d4ff;
+  margin-bottom: 5px;
+}
+
+.text-box h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 0;
+}
+
+.text-box p {
   font-size: 18px;
   line-height: 1.6;
 }
+
+
+
 
 .skills {
   text-align: center;
