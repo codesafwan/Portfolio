@@ -1,176 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohamed Safwan | Portfolio</title>
-    <link rel="stylesheet" href="stylee.css" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Safwan | Portfolio</title>
+
+  <!-- BOX ICONS -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- TYPED JS -->
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 10%;
+      background: #000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      color: #0ef;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a {
+      margin-left: 25px;
+      color: #fff;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ef;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 120px 10%;
+    }
+
+    /* HOME */
+    .home {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .home h1 {
+      font-size: 52px;
+    }
+
+    .home span {
+      color: #0ef;
+    }
+
+    .home p {
+      margin-top: 10px;
+    }
+
+    .home-sci a {
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      border: 2px solid #0ef;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      color: #0ef;
+      margin: 15px 8px;
+      transition: 0.3s;
+    }
+
+    .home-sci a:hover {
+      background: #0ef;
+      color: #000;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* SKILLS */
+    .skills {
+      text-align: center;
+    }
+
+    .skill {
+      margin: 20px auto;
+    }
+
+    .bar {
+      width: 300px;
+      height: 15px;
+      background: #333;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: auto;
+    }
+
+    .bar span {
+      display: block;
+      height: 100%;
+      background: #0ef;
+    }
+
+    .html { width: 90%; }
+    .css { width: 85%; }
+    .js { width: 70%; }
+    .java { width: 65%; }
+    .python { width: 75%; }
+
+    /* SERVICES */
+    .services {
+      text-align: center;
+    }
+
+    .service-box {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #111;
+      padding: 30px;
+      width: 250px;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      background: #0ef;
+      color: #000;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+    }
+
+    .contact form {
+      max-width: 400px;
+      margin: auto;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      background: #111;
+      color: #fff;
+      border-radius: 5px;
+    }
+
+    button {
+      background: #0ef;
+      color: #000;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      box-shadow: 0 0 12px #0ef;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+<header>
+  <a class="logo">Portfolio</a>
+  <nav>
+    </a>
+    </a>
+    </a>
+    </a>
+    </a>
+  </nav>
+</header>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <h3>Hello, it's me</h3>
-            <h1>Mohamed Safwan</h1>
-            <h3>And I'm a Web Developer and Web Designer <span class="multiple-text"></span></h3>
+<section class="home" id="home">
+  <div>
+    <h3>Hello, it's me</h3>
+    <h1>Mohamed Safwan</h1>
+    <h2>I am a <span class="typing"></span></h2>
+    <p>Web Developer Fresher passionate about responsive websites.</p>
 
-            <p>
-                Motivated and detail-oriented Web Developer Fresher with a strong foundation
-                in front-end and back-end technologies. Passionate about building responsive,
-                user-friendly, and visually appealing websites. Eager to contribute skills
-                to a dynamic development team.
-            </p>
-
-            <div class="home-sci">
-                <a href="https://www.instagram.com/safw0_n7?igsh=MThyZDloNDlpOHA3MA%3D%3D&utm_source=qr">
-                    <i class='bx bxl-instagram'></i>
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/mohammad-safwan-4418bb375?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app">
-                    <i class='bx bxl-linkedin'></i>
-                </a>
-
-                <a href="mailto:mohammadsafwanudren@gmail.com">
-                    <i class='bx bxl-gmail'></i>
-                </a>
-
-                <a href="https://wa.me/918925397288" target="_blank">
-                    <i class='bx bxl-whatsapp'></i>
-                </a>
-
-
-            </div>
-
-
-    </section>
-
-    <section class="about" id="about">
-        <div class="about-img">
-         <img src="imagesss.jpeg" alt="Mohamed Safwan">
-
-
-        </div>
-
-        <div class="about-text">
-            <h2 class="center">About Me</h2>
-            <h4 class="center">Web Developer</h4>
-            <ul>
-                <li>Passionate Web Developer Fresher</li>
-                <li>Solid understanding of front-end technologies</li>
-                <li>Good knowledge of back-end development</li>
-                <li>Eager to learn and grow in real-world projects</li>
-            </ul>
-        </div>
-    </section>
-
-
-    <section class="skills" id="skills">
-        <h1 class="sub-title">My <span>Skills</span></h1>
-
-        <div class="skills-container">
-            <div class="skill">
-                <h3>HTML</h3>
-                <div class="progress-bar html"><span></span></div>
-            </div>
-
-            <div class="skill">
-                <h3>CSS</h3>
-                <div class="progress-bar css"><span></span></div>
-            </div>
-
-            <div class="skill">
-                <h3>JavaScript</h3>
-                <div class="progress-bar javascript"><span></span></div>
-            </div>
-
-            <div class="skill">
-                <h3>Java</h3>
-                <div class="progress-bar java"><span></span></div>
-            </div>
-
-            <div class="skill">
-                <h3>Python</h3>
-                <div class="progress-bar python"><span></span></div>
-            </div>
-        </div>
-    </section>
-
-    <section class="service" id="services">
-    <h1 class="sub-title">My <span>Services</span></h1>
-    <div class="service-list">
-        <div class="service-item">
-            <i class='bx bx-code-alt'></i>
-            <h3>Web Development</h3>
-            <p>Building responsive and dynamic websites using modern technologies like HTML, CSS, JavaScript, and frameworks.</p>
-        </div>
-
-        <div class="service-item">
-            <i class='bx bx-paint'></i>
-            <h3>Web Design</h3>
-            <p>Creating visually appealing and user-friendly designs for websites and applications.</p>
-        </div>
-
-        <div class="service-item">
-            <i class='bx bx-mobile-alt'></i>
-            <h3>Responsive Design</h3>
-            <p>Ensuring websites are mobile-friendly and look great on all devices.</p>
-        </div>
+    <div class="home-sci">
+      <a href="#"><i class='bx bxl-instagram'></i></a>
+      <a href="#"><i class='bx bxl-linkedin'></i></a>
+      <a href="mailto:mohammadsafwanudren@gmail.com"><i class='bx bxl-gmail'></i></a>
+      <a href="https://wa.me/918925397288"><i class='bx bxl-whatsapp'></i></a>
     </div>
+  </div>
 </section>
-    <section class="contact" id="contact">
-        <h1 class="sub-title">Contact <span>Me</span></h1>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Get in Touch</h3>
-                <p><i class='bx bx-envelope'></i> mohamedsafwanudren@gmail.com</p>
-                <p><i class='bx bx-phone'></i> +91 8925397288</p>
-            </div>
-            <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit" class="btn-box">Send Message</button>
-            </form>
-        </div>
-    </section>
 
+<section class="about" id="about">
+  <img src="imagesss.jpeg" alt="Profile Image">
+  <div>
+    <h2>About Me</h2>
+    <p>
+      Web Developer Fresher with interest in front‑end and back‑end technologies.
+      Passionate about learning and building responsive websites.
+    </p>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <h2>My Skills</h2>
+
+  <div class="skill">HTML
+    <div class="bar"><span class="html"></span></div>
+  </div>
+
+  <div class="skill">CSS
+    <div class="bar"><span class="css"></span></div>
+  </div>
+
+  <div class="skill">JavaScript
+    <div class="bar"><span class="js"></span></div>
+  </div>
+
+  <div class="skill">Java
+    <div class="bar"><span class="java"></span></div>
+  </div>
+
+  <div class="skill">Python
+    <div class="bar"><span class="python"></span></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <h2>Services</h2>
+  <div class="service-box">
+    <div class="card">Web Development</div>
+    <div class="card">Web Design</div>
+    <div class="card">Responsive Design</div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <form id="contactForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
 
 <footer>
-    <p>&copy; 2025 Mohamed Safwan. All Rights Reserved.</p>
+  <p>© 2025 Mohamed Safwan. All Rights Reserved.</p>
 </footer>
 
 <script>
-    const typed = new Typed('.multiple-text', {
-        strings: ['Web Developer', 'Web Designer', 'Web Developer'],
-        typeSpeed: 100,
-        backSpeed: 60,
-        loop: true
+  new Typed(".typing", {
+    strings: ["Web Developer", "Web Designer"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+  });
+
+  document.getElementById("contactForm")
+    .addEventListener("submit", function(e) {
+      e.preventDefault();
+      alert("✅ Message sent successfully!");
+      this.reset();
     });
 </script>
 
 </body>
-
 </html>
